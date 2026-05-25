@@ -1,0 +1,119 @@
+- generic [ref=e1]:
+  - generic [ref=e3]:
+    - generic [ref=e5]:
+      - heading "React Component Generator" [level=1] [ref=e7]
+      - generic [ref=e9]:
+        - generic [ref=e53]:
+          - generic [ref=e54]:
+            - generic [ref=e57]: Create a pricing card component with a title, price, list of features, and a CTA button
+            - img [ref=e60]
+          - generic [ref=e63]:
+            - img [ref=e66]
+            - generic [ref=e71]:
+              - generic [ref=e74]: Creating App.jsx
+              - separator [ref=e75]
+              - generic [ref=e78]: Creating PricingCard.jsx
+              - separator [ref=e79]
+              - generic [ref=e80]:
+                - paragraph [ref=e81]:
+                  - text: Done! Created a reusable
+                  - code [ref=e90]: PricingCard
+                  - text: "component with:"
+                - list [ref=e83]:
+                  - listitem [ref=e84]: Title, price, and period
+                  - listitem [ref=e85]: Feature list with checkmark icons
+                  - listitem [ref=e86]: Customizable CTA button with click handler
+                  - listitem [ref=e87]: Clean styling with Tailwind CSS
+                - paragraph [ref=e88]: The App.jsx shows an example usage with sample data.
+        - generic [ref=e20]:
+          - textbox "Describe the React component you want to create..." [ref=e21]
+          - button [disabled] [ref=e22]:
+            - img [ref=e23]
+    - separator [ref=e26]
+    - generic [ref=e28]:
+      - generic [ref=e29]:
+        - tablist [ref=e31]:
+          - tab "Preview" [ref=e32]
+          - tab "Code" [active] [selected] [ref=e33]
+        - generic [ref=e34]:
+          - button "Sign In" [ref=e35]
+          - button "Sign Up" [ref=e36]
+      - generic [ref=e91]:
+        - generic [ref=e97]:
+          - generic [ref=e98]:
+            - generic [ref=e99] [cursor=pointer]:
+              - img [ref=e100]
+              - img [ref=e102]
+              - generic [ref=e104]: components
+            - generic [ref=e107] [cursor=pointer]:
+              - img [ref=e108]
+              - generic [ref=e113]: PricingCard.jsx
+          - generic [ref=e115] [cursor=pointer]:
+            - img [ref=e116]
+            - generic [ref=e121]: App.jsx
+        - separator [ref=e122]
+        - code [ref=e127]:
+          - generic [ref=e128]:
+            - generic [ref=e130]:
+              - generic [ref=e133]: "1"
+              - generic [ref=e135]: "2"
+              - generic [ref=e136]:
+                - generic [ref=e137] [cursor=pointer]: 
+                - generic [ref=e138]: "3"
+              - generic [ref=e139]:
+                - generic [ref=e140] [cursor=pointer]: 
+                - generic [ref=e141]: "4"
+              - generic [ref=e142]:
+                - generic [ref=e143] [cursor=pointer]: 
+                - generic [ref=e144]: "5"
+              - generic [ref=e146]:
+                - generic [ref=e147] [cursor=pointer]: 
+                - generic [ref=e148]: "6"
+              - generic [ref=e150]: "7"
+              - generic [ref=e152]: "8"
+              - generic [ref=e154]: "9"
+              - generic [ref=e155]:
+                - generic [ref=e156] [cursor=pointer]: 
+                - generic [ref=e157]: "10"
+              - generic [ref=e159]: "11"
+              - generic [ref=e161]: "12"
+              - generic [ref=e163]: "13"
+              - generic [ref=e165]: "14"
+              - generic [ref=e167]: "15"
+              - generic [ref=e169]: "16"
+              - generic [ref=e171]: "17"
+              - generic [ref=e173]: "18"
+              - generic [ref=e176]: "19"
+              - generic [ref=e178]: "20"
+              - generic [ref=e180]: "21"
+              - generic [ref=e182]: "22"
+              - generic [ref=e184]: "23"
+            - generic [ref=e283]:
+              - generic [ref=e285]: import PricingCard from '@/components/PricingCard';
+              - generic [ref=e288]: "export default function App() {"
+              - generic [ref=e290]: return (
+              - generic [ref=e292]: <div className="min-h-screen bg-gray-50 flex
+              - generic [ref=e294]: items-center justify-center p-4">
+              - generic [ref=e296]: <PricingCard
+              - generic [ref=e298]: title="Professional"
+              - generic [ref=e300]: price="$29"
+              - generic [ref=e302]: period="/month"
+              - generic [ref=e304]: "features={["
+              - generic [ref=e306]: "'Up to 100 projects',"
+              - generic [ref=e308]: "'Advanced analytics',"
+              - generic [ref=e310]: "'Priority support',"
+              - generic [ref=e312]: "'Custom integrations',"
+              - generic [ref=e314]: "'API access'"
+              - generic [ref=e316]: "]}"
+              - generic [ref=e318]: buttonText="Get Started"
+              - generic [ref=e320]: "onButtonClick={() => alert('Clicked Get"
+              - generic [ref=e322]: "Started!')}"
+              - generic [ref=e324]: />
+              - generic [ref=e326]: </div>
+              - generic [ref=e328]: );
+              - generic [ref=e330]: "}"
+            - textbox "Editor content" [ref=e333]
+  - alert [ref=e47]
+  - generic [ref=e334]:
+    - alert
+    - alert
