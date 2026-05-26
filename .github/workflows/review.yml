@@ -1,0 +1,47 @@
+name: Claude Code Review
+
+on:
+  pull_request:
+    types: [opened, synchronize, reopened]
+
+jobs:
+  review:
+    runs-on: ubuntu-latest
+    permissions:
+      contents: read
+      pull-requests: write
+    steps:
+      - name: Checkout repository
+        uses: actions/checkout@v4
+        with:
+          fetch-depth: 0
+
+      - name: Run Claude Code Review
+        uses: anthropics/claude-code-action@v1
+        with:
+          anthropic_api_key: ${{ secrets.ANTHROPIC_API_KEY }}
+          direct_prompt: |
+            You are a senior code reviewer. Review the changes in this pull request and post your findings as a single PR review.
+
+            Focus only on high-value issues in this order of priority:
+
+            1. **Correctness** — Does the code do what it claims? Are edge cases and error paths handled?
+            2. **Security** — SQL injection, XSS, auth bypasses, secrets in code, improper input validation at system boundaries.
+            3. **Logic bugs** — Off-by-one errors, race conditions, wrong conditionals, null/undefined dereferences.
+            4. **Test coverage** — Are critical paths tested? Do tests actually verify behavior or just pass trivially?
+            5. **Performance** — N+1 queries, unbounded loops, unnecessary re-renders, memory leaks.
+            6. **API/interface design** — Is the public surface minimal and hard to misuse?
+            7. **Error handling** — Are failures surfaced correctly, or silently swallowed?
+            8. **Dependencies** — Are any new packages justified given the added attack surface and maintenance burden?
+
+            Rules:
+            - Skip formatting, style, and naming preferences — those are handled by linters.
+            - Only flag real issues, not hypothetical ones.
+            - For each issue, state: what the problem is, why it matters, and how to fix it.
+            - If the diff is clean, say so briefly. Do not invent issues.
+
+            Use the `gh` CLI to post your review:
+            gh pr review ${{ github.event.pull_request.number }} --comment --body "<your review>"
+
+            Or post inline comments for specific lines where applicable.
+          allowed_tools: "Bash(git:*),Bash(gh:*)"
