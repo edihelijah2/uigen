@@ -38,20 +38,7 @@ jobs:
 
       - name: Create MCP Config
         run: |
-          cat > /tmp/mcp-config.json << 'EOF'
-          {
-            "mcpServers": {
-              "playwright": {
-                "command": "npx",
-                "args": [
-                  "@playwright/mcp@latest",
-                  "--allowed-origins",
-                  "localhost:3000;cdn.tailwindcss.com;esm.sh"
-                ]
-              }
-            }
-          }
-          EOF
+          printf '%s\n' '{"mcpServers":{"playwright":{"command":"npx","args":["@playwright/mcp@latest","--allowed-origins","localhost:3000;cdn.tailwindcss.com;esm.sh"]}}}' > /tmp/mcp-config.json
 
       - name: Run Claude Code
         id: claude
